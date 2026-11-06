@@ -1,0 +1,7 @@
+--cpu Cortex-M0
+"objects\main.o"
+"objects\startup_stm32f072xb.o"
+--strict --scatter "STM32F072RB.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\stm32F072RB_HFY_FST_Sender.map" -o Objects\stm32F072RB_HFY_FST_Sender.axf
