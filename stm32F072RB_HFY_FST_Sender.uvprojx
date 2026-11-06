@@ -10,6 +10,7 @@
       <TargetName>STM32F072RB</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pArmCC>6220000::V6.22::ARMCLANG</pArmCC>
       <pCCUsed>6220000::V6.22::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
@@ -109,14 +110,14 @@
           <ComprImg>1</ComprImg>
         </CommonProperty>
         <DllOption>
-          <SimDllName>SARMCM3.DLL</SimDllName>
-          <SimDllArguments>REMOVETABLE</SimDllArguments>
-          <SimDlgDll>DARMCM1.DLL</SimDlgDll>
-          <SimDlgDllArguments>DARMCM1.DLL</SimDlgDllArguments>
+          <SimDllName></SimDllName>
+          <SimDllArguments></SimDllArguments>
+          <SimDlgDll></SimDlgDll>
+          <SimDlgDllArguments></SimDlgDllArguments>
           <TargetDllName>SARMCM3.DLL</TargetDllName>
           <TargetDllArguments>REMOVETABLE</TargetDllArguments>
-          <TargetDlgDll>DARMCM1.DLL</TargetDlgDll>
-          <TargetDlgDllArguments>DARMCM1.DLL</TargetDlgDllArguments>
+          <TargetDlgDll></TargetDlgDll>
+          <TargetDlgDllArguments></TargetDlgDllArguments>
         </DllOption>
         <DebugOption>
           <OPTHX>
@@ -338,9 +339,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define></Define>
+              <Define>STM32F072xB</Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>C:\Users\alexa\AppData\Local\Arm\Packs\ARM\CMSIS\6.3.0\CMSIS\Core\Include;C:\Users\alexa\AppData\Local\Arm\Packs\Keil\NUCLEO-F072RB_BSP\1.1.0\Examples\Blinky\STM32CubeMX\NUCLEO-F072RB\STM32CubeMX\Drivers\CMSIS\Device\ST\STM32F0xx\Include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -396,13 +397,23 @@
             </File>
           </Files>
         </Group>
+        <Group>
+          <GroupName>::CMSIS</GroupName>
+        </Group>
       </Groups>
     </Target>
   </Targets>
 
   <RTE>
     <apis/>
-    <components/>
+    <components>
+      <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="6.2.0" condition="ARMv6_7_8-M Device">
+        <package name="CMSIS" schemaVersion="1.7.53" url="https://www.keil.com/pack/" vendor="ARM" version="6.3.0"/>
+        <targetInfos>
+          <targetInfo name="STM32F072RB"/>
+        </targetInfos>
+      </component>
+    </components>
     <files/>
   </RTE>
 
